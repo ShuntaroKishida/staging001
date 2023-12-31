@@ -1,8 +1,22 @@
-<div>
-    <h3>新規企業登録</h3>
-    <%= form_with(model: @company, local: true) do |form| %>
-        <%= form.text_field :company_name, placeholder: "例）株式会社Staging" %>
-        <%= form.text_field :representative_name, placeholder: "例）三宅泰斗" %>
-        <%= form.submit "登録" %>
-    <% end %>
+<div class="title">
+    <p>新規企業登録</p>
 </div>
+<%= form_with(model: @company, local: true) do |form| %>
+    <table>
+        <thead>
+            <tr>
+                <th class="company-name_th">企業名</th>
+                <th class="representative-name_th">代表者名</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><%= form.text_field :company_name, placeholder: "例）株式会社Staging" %></td>
+                <td><%= form.text_field :representative_name, placeholder: "例）三宅泰斗" %></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="post_btn">
+        <%= form.submit "登録" %>
+    </div>
+<% end %>

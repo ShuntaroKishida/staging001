@@ -1,13 +1,23 @@
-<% @companies.each do |company| %>
-    <div>
-        <p><%= company.company_name %></p>
-        <p><%= company.representative_name %></p>
-        <div>
-            <ul>
-                <li>
-                    <%= link_to '詳細', company_path(company.id) %>
-                </li>
-            </ul>
-        </div>
-    </div>
-<% end %>
+<div class="title">
+    <p>企業一覧</p>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th class="company-name_th">企業名</th>
+            <th class="representative-name_th">代表者名</th>
+            <th class="student_th">生徒数</th>
+            <th class="fee_th">売上金額</th>
+        </tr>
+    </thead>
+    <% @companies.each do |company| %>
+        <tbody>
+            <tr>
+                <td class="company-name"><p><%= link_to company.company_name, company_path(company.id) %></p></td>
+                <td class="representative-name"><%= company.representative_name %></td>
+                <td class="student">100</td>
+                <td class="fee">1,000,000円</td>
+            </tr>
+        </tbody>
+    <% end %>
+</table>
