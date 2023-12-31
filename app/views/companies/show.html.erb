@@ -1,0 +1,12 @@
+<div>
+    <p><%= @company.company_name %></p>
+    <p><%= @company.representative_name %></p>
+    <ul>
+        <li>
+            <%= link_to '編集', edit_company_path(@company.id) %>
+        </li>
+        <li>
+            <%= link_to '削除', company_path(@company.id), data: {turbo_method: :delete} %>
+        </li>
+    </ul>
+</div>

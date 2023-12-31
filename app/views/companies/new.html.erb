@@ -1,0 +1,8 @@
+<div>
+    <h3>新規企業登録</h3>
+    <%= form_with(model: @company, local: true) do |form| %>
+        <%= form.text_field :company_name, placeholder: "例）株式会社Staging" %>
+        <%= form.text_field :representative_name, placeholder: "例）三宅泰斗" %>
+        <%= form.submit "登録" %>
+    <% end %>
+</div>

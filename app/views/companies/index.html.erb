@@ -1,8 +1,13 @@
 <% @companies.each do |company| %>
     <div>
         <p><%= company.company_name %></p>
-        <span>
-        <%= company.representative_name %>
-        </span>
+        <p><%= company.representative_name %></p>
+        <div>
+            <ul>
+                <li>
+                    <%= link_to '詳細', company_path(company.id) %>
+                </li>
+            </ul>
+        </div>
     </div>
 <% end %>
