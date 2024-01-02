@@ -1,12 +1,23 @@
-<div>
-    <p><%= @company.company_name %></p>
-    <p><%= @company.representative_name %></p>
-    <ul>
-        <li>
+<div class="show">
+    <h2>企業情報詳細</h2>
+    <div class="field">
+        <%= "・企業名　：　" + @company.company_name %>
+    </div>
+    <div class="field">
+        <%= "・代表者名：　" + @company.representative_name %>
+    </div>
+    <div class="field">
+        <%= "・生徒数　：　" + "20人" %>
+    </div>
+    <div class="field">
+        <%= "・売上総額：　" + "600,000円" %>
+    </div>
+    <div class="show_btn">
+        <div class="edit_btn">
             <%= link_to '編集', edit_company_path(@company.id) %>
-        </li>
-        <li>
+        </div>
+        <div class="delete_btn">
             <%= link_to '削除', company_path(@company.id), data: {turbo_method: :delete} %>
-        </li>
-    </ul>
+        </div>
+    </div>
 </div>

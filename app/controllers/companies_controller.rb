@@ -10,13 +10,13 @@ class CompaniesController < ApplicationController
 
     def create
         Company.create(company_params)
-        redirect_to '/'
+        redirect_to companies_path
     end
 
     def destroy
         company = Company.find(params[:id])
         company.destroy
-        redirect_to root_path
+        redirect_to companies_path
     end
 
     def edit

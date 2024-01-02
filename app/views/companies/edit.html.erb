@@ -1,8 +1,18 @@
-<div>
-    <h3>変更する</h3>
-    <%= form_with(model: @company, local: true) do |form| %>
-        <%= form.text_field :company_name, placeholder: "例）株式会社Staging" %>
-        <%= form.text_field :representative_name, placeholder: "例）三宅泰斗" %>
-        <%= form.submit "変更" %>
+<div class="devise">
+    <h2>企業情報変更</h2>
+    <%= form_with model: @company, local: true do |f|%>
+        <div class="field">
+            <%= f.label :"企業名" %><br />
+            <%= f.text_field :company_name, autofocus: true %>
+        </div>
+
+        <div class="field">
+            <%= f.label :"代表者名" %><br />
+            <%= f.text_field :representative_name, autofocus: true %>
+        </div>
+
+        <div class="actions">
+            <%= f.submit "変更" %>
+        </div>
     <% end %>
 </div>

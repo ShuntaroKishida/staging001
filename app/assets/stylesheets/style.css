@@ -252,3 +252,52 @@ devise
     padding: 10px;
     border-radius: 20px;
 }
+
+/*
+詳細画面
+=========================================*/
+.show {
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+}
+
+.show h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.show .field {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.show_btn {
+    margin-top: 2rem;
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.edit_btn,
+.delete_btn {
+    border-radius: 10px;
+    padding: .5rem;
+    width: 30%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.edit_btn {
+    background-color: blue;
+    color: white;
+}
+
+.delete_btn {
+    background-color: red;
+    color: black;
+}

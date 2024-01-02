@@ -1,19 +1,18 @@
 <div class="devise">
     <h2>情報変更</h2>
     <%= form_with model: current_user, local: true do |f|%>
-
         <div class="field">
-        <%= f.label :"名前" %><br />
-        <%= f.text_field :name, autofocus: true %>
+            <%= f.label :"名前" %><br />
+            <%= f.text_field :name, autofocus: true %>
         </div>
 
         <div class="field">
-        <%= f.label :"メールアドレス" %><br />
-        <%= f.email_field :email, autofocus: true %>
+            <%= f.label :"メールアドレス" %><br />
+            <%= f.email_field :email, autofocus: true %>
         </div>
 
         <div class="actions">
-        <%= f.submit "変更" %>
+            <%= f.submit "変更" %>
         </div>
     <% end %>
 </div>
