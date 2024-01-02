@@ -1,22 +1,45 @@
-<div class="title">
-    <p>新規企業登録</p>
-</div>
-<%= form_with(model: @company, local: true) do |form| %>
-    <table>
-        <thead>
-            <tr>
-                <th class="company-name_th">企業名</th>
-                <th class="representative-name_th">代表者名</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><%= form.text_field :company_name, placeholder: "例）株式会社Staging" %></td>
-                <td><%= form.text_field :representative_name, placeholder: "例）三宅泰斗" %></td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="post_btn">
-        <%= form.submit "登録" %>
+<div class="new_item">
+    <div class="new_company">
+        <h2>新規企業登録</h2>
+        <%= form_with model: @company, class: 'new_user', local: true do |f| %>
+
+            <div class="field">
+                <%= f.label :"企業名" %><br />
+                <%= f.text_field :company_name, placeholder: "例）株式会社Staging", autofocus: true %>
+            </div>
+
+            <div class="field">
+                <%= f.label :"代表者名" %><br />
+                <%= f.text_field :representative_name, placeholder: "例）三宅泰斗", autofocus: true %>
+            </div>
+
+            <div class="actions">
+                <%= f.submit "登録" %>
+            </div>
+        <% end %>
     </div>
-<% end %>
+    <div class="new_student">
+        <h2>新規生徒登録（未実装）</h2>
+        <%= form_with model: @company, class: 'new_user', local: true do |f| %>
+
+            <div class="field">
+                <%= f.label :"生徒名" %><br />
+                <%= f.text_field :"", placeholder: "例）三宅泰斗", autofocus: true %>
+            </div>
+
+            <div class="field">
+                <%= f.label :"所属企業名" %><br />
+                <%= f.text_field :"", placeholder: "例）株式会社Staging", autofocus: true %>
+            </div>
+
+            <div class="field">
+                <%= f.label :"入校日" %><br />
+                <%= f.text_field :"", autofocus: true %>
+            </div>
+
+            <div class="actions">
+                <%= f.submit "登録" %>
+            </div>
+        <% end %>
+    </div>
+</div>

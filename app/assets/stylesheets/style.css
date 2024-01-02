@@ -204,3 +204,51 @@ devise
     padding: 10px;
     border-radius: 20px;
 }
+
+/*
+新規登録画面
+=========================================*/
+.new_item {
+    width: 100%;
+    display: flex;
+}
+
+.new_company,
+.new_student {
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+}
+
+.new_item h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.new_item .field {
+    margin-top: 2rem;
+}
+
+.new_item .field label {
+    font-weight: bold;
+}
+
+.new_item .field input {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: .5rem;
+    width: 100%;
+}
+
+.new_item .actions {
+    width: 100%;
+    background-color:blue;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 10px;
+    border-radius: 20px;
+}
