@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root to: 'homes#index'
   resources :companies
   resources :homes
-  resources :users, only: :show
+  resources :users, only: [:edit, :update]
 end
