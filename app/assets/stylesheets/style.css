@@ -57,27 +57,36 @@ td {
     width: 80%;
 }
 
-.login_btn {
+.login {
     height: 3rem;
     width: 10rem;
-    border-radius: 10px;
     margin-left: 80%;
+    border-radius: 10px;
     background-color: black;
     color: white;
     position: relative;
 }
 
 .login_btn:hover {
-    background-color: white;
-    color: black;
+    color: deeppink;
 }
 
-.login_btn p {
+.login p {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
+}
+
+.user_name {
+    position: absolute;
+    left: -20rem;
+    height: 3rem;
+    width: 24rem;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 1px 1px 10px black;
 }
 
 .main {
@@ -152,4 +161,46 @@ td {
     font-size: 1rem;
     font-weight: bold;
     margin-left: 90%;
+}
+
+/*
+devise
+=========================================*/
+.devise {
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+}
+
+.devise h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.field {
+    margin-top: 2rem;
+}
+
+.field label {
+    font-weight: bold;
+}
+
+.field input {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: .5rem;
+    width: 50%;
+}
+
+.actions {
+    width: 50%;
+    background-color:blue;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 10px;
+    border-radius: 20px;
 }

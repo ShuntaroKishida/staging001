@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'companies#index'
+  devise_for :users
+  root to: 'homes#index'
   resources :companies
+  resources :homes
+  resources :users, only: :show
 end
