@@ -29,6 +29,10 @@ class CompaniesController < ApplicationController
         redirect_to companies_path
     end
 
+    def show
+        @company = Company.find(params[:id])
+    end
+
     private
     def company_params
         params.require(:company).permit(:company_name, :representative_name)

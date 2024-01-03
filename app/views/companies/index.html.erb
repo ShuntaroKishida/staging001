@@ -21,7 +21,7 @@
     <% @companies.each do |company| %>
         <tbody>
             <tr>
-                <td class="company-name"><p><%= company.company_name %></p></td>
+                <td class="company-name"><p><%= link_to company.company_name, company_path(company.id) %></p></td>
                 <td class="representative-name"><%= company.representative_name %></td>
                 <td class="student">100</td>
                 <td class="fee">1,000,000円</td>
