@@ -1,11 +1,19 @@
-<div class="title">
-    <p>ユーザー一覧</p>
+<div class="company_head">
+    <div class="title">
+        <p>ユーザー一覧</p>
+    </div>
+    <div class="new_btn">
+        <p><%= link_to '新規登録', new_user_registration_path %></p>
+    </div>
 </div>
+
 <table>
     <thead>
         <tr>
             <th class="company-name_th">ユーザー名</th>
             <th class="representative-name_th">Emailアドレス</th>
+            <th class="editer_th"></th>
+            <th class="editer_th"></th>
         </tr>
     </thead>
     <% @users.each do |user| %>
@@ -13,6 +21,16 @@
             <tr>
                 <td class="company-name"><p><%= user.name %></p></td>
                 <td class="representative-name"><%= user.email %></td>
+                <td class="editer">
+                    <div class="edit_btn">
+                        <%= link_to '編集', "" %>
+                    </div>
+                </td>
+                <td class="editer">
+                    <div class="delete_btn">
+                        <%= link_to '削除', "", data: {turbo_method: :delete} %>
+                    </div>
+                </td>
             </tr>
         </tbody>
     <% end %>
