@@ -1,6 +1,12 @@
-<div class="title">
-    <p>企業一覧</p>
+<div class="company_head">
+    <div class="title">
+        <p>企業一覧</p>
+    </div>
+    <div class="new_btn">
+        <p><%= link_to '新規登録', new_company_path %></p>
+    </div>
 </div>
+
 <table>
     <thead>
         <tr>
@@ -8,15 +14,27 @@
             <th class="representative-name_th">代表者名</th>
             <th class="student_th">生徒数</th>
             <th class="fee_th">売上金額</th>
+            <th class="editer_th"></th>
+            <th class="editer_th"></th>
         </tr>
     </thead>
     <% @companies.each do |company| %>
         <tbody>
             <tr>
-                <td class="company-name"><p><%= link_to company.company_name, company_path(company.id) %></p></td>
+                <td class="company-name"><p><%= company.company_name %></p></td>
                 <td class="representative-name"><%= company.representative_name %></td>
                 <td class="student">100</td>
                 <td class="fee">1,000,000円</td>
+                <td class="editer">
+                    <div class="edit_btn">
+                        <%= link_to '編集', edit_company_path(company.id) %>
+                    </div>
+                </td>
+                <td class="editer">
+                    <div class="delete_btn">
+                        <%= link_to '削除', company_path(company.id), data: {turbo_method: :delete} %>
+                    </div>
+                </td>
             </tr>
         </tbody>
     <% end %>

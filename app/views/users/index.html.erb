@@ -1,0 +1,19 @@
+<div class="title">
+    <p>ユーザー一覧</p>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th class="company-name_th">ユーザー名</th>
+            <th class="representative-name_th">Emailアドレス</th>
+        </tr>
+    </thead>
+    <% @users.each do |user| %>
+        <tbody>
+            <tr>
+                <td class="company-name"><p><%= user.name %></p></td>
+                <td class="representative-name"><%= user.email %></td>
+            </tr>
+        </tbody>
+    <% end %>
+</table>

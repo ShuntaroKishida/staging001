@@ -18,28 +18,4 @@
             </div>
         <% end %>
     </div>
-    <div class="new_student">
-        <h2>新規生徒登録（未実装）</h2>
-        <%= form_with model: @company, class: 'new_user', local: true do |f| %>
-
-            <div class="field">
-                <%= f.label :"生徒名" %><br />
-                <%= f.text_field :"", placeholder: "例）三宅泰斗", autofocus: true %>
-            </div>
-
-            <div class="field">
-                <%= f.label :"所属企業名" %><br />
-                <%= f.text_field :"", placeholder: "例）株式会社Staging", autofocus: true %>
-            </div>
-
-            <div class="field">
-                <%= f.label :"入校日" %><br />
-                <%= f.text_field :"", autofocus: true %>
-            </div>
-
-            <div class="actions">
-                <%= f.submit "登録" %>
-            </div>
-        <% end %>
-    </div>
 </div>
